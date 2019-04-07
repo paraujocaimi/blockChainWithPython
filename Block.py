@@ -23,7 +23,7 @@ class Block:
     def printBlock(self):
         print ("Block #" + str(self.index))
         print ("Merkle Tree: "  + str(self.merkleRoot))
-        print ("Frase: " + str(self.dado))
+        print ("Trasanção: " + str(self.dado))
         print ("Block Hash: " + str(self.hash))
         print ("Block Previous Hash: " + str(self.previousHash))
         print ("---------------")

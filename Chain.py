@@ -51,7 +51,7 @@ def main():
     print("=== TRANSAÇÕES ===")
     print(" ")
     for i in transacaoBlock:
-        print(i.printBlock())
+        # print(i.printBlock())
         # adicionando o hash da transação no array de hash 
         arrayHash.append(i.hashTransacao)
 
@@ -59,11 +59,15 @@ def main():
     # tanto faz o maket tree quando adiciona-los ao mesmo array
     merkTree = MerkTree(arrayHash)
     merkTree.calculateMerkTree()
+    merkTree.pegarHashMerkleRoot()
     
     # Aqui vou criar o meu primeiro bloco da Chain
-    scilaCoin.addBlock(Block(1, date.datetime.now(),transacaoBlock),merkTree.pegarHashMerkleRoot())
+    # scilaCoin.addBlock(Block(1, date.datetime.now(),transacaoBlock),merkTree.pegarHashMerkleRoot())
+    # scilaCoin.addBlock(Block(2, date.datetime.now(),transacaoBlock),merkTree.pegarHashMerkleRoot())
+    # scilaCoin.addBlock(Block(3, date.datetime.now(),transacaoBlock),merkTree.pegarHashMerkleRoot())
+    # scilaCoin.addBlock(Block(4, date.datetime.now(),transacaoBlock),merkTree.pegarHashMerkleRoot())
 
-    scilaCoin.printBlockChain()
+    # scilaCoin.printBlockChain()
 
 if __name__ == '__main__':
     main()
