@@ -32,19 +32,21 @@ class MerkTree:
                 sha = hashlib.sha256()
                 i=0
                 while i < len(self.arrayHash):
-                        print("Posição: " + str(i))
                         elem1 = (self.arrayHash[i])
-                        print("Hash: " + str(elem1))
+                        print("Posição: " + str(i) + " Hash: " + str(elem1))
                         
                         i+=1
+
                         if (i>= len(self.arrayHash)):
+                                print("Acabou aqui!!!: " + str(i))
                                 pass
                         else:
                                 elem2 = (self.arrayHash[i])
-                                print("Posição: " + str(i))
-                                print("Hash: " + str(elem2))
-                                i+=1    
+                                print("Posição: " + str(i) + " Hash: " + str(elem2))
+                                i+=1 
+
                                 no = str(elem1)+str(elem2)
+                                print("no: " + str(elem1)+str(elem2))
                                 sha.update(str(no).encode('utf-8'))
                                 self.arrayHash.append(sha.hexdigest())      
                 
